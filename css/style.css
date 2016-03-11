@@ -1,0 +1,363 @@
+/* 
+Project Name: Gwen Kidera Design & Photography Homepage
+Author: Gwen Kidera
+Designer in Boston
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 16px;
+     line-height: 1.4;
+     font-family: 'PT Sans Narrow', sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+/* Center the container */
+#container {
+}
+
+header {
+     height: 20em;
+     width: 100%;
+     padding: 4% 44%;
+     background-image: url("../img/pixelsoffury.png");
+     background-repeat: no-repeat;
+     background-size: 100%;
+     background-position: center;
+}
+
+.standardLayout {
+     height: auto;
+     width: 100%;
+     padding: 2em 18%;
+}
+
+.footer {
+     background-color: #250670;
+     color: white;
+     padding: .3rem 18%;
+     font-size: .8em;
+}
+
+/******************************************
+/* HEADERS              
+/*******************************************/
+
+h2, .introBlurb, .testimonials p:nth-child(2), .experience div p:first-child {
+     font-family: 'Droid Serif', serif;
+     font-weight: 700;
+}
+
+h2 {
+     text-align: center;
+     width: 8em;
+     margin: auto;
+     margin-bottom: 2em;
+}
+
+.purpleh2 {
+     border-top: 1px solid #250670;
+     border-bottom: 1px solid #250670;
+     color: #250670;
+}
+
+.whiteh2 {
+     border-top: 1px solid white;
+     border-bottom: 1px solid white;
+     color: white;
+}
+
+h3 {
+     font-weight: 700;
+     font-size: 1em;
+     text-align: center;
+     text-transform: uppercase;
+     margin-top: 0;
+     margin-bottom: 2em;
+}
+
+
+/******************************************
+/* BUTTON                  
+/*******************************************/
+
+.button, .testimonials div, .timeline p {
+     background-color: #250670;
+     color: white;
+     border-radius: .2em;
+}
+
+.button {
+     text-transform: uppercase;
+     text-align: center;
+     padding: .2em;
+     width: 9em;
+     height: 1.5em;
+     margin: auto;
+     margin-top: 2em;
+}
+
+.intro .button {
+     float: left;
+     margin-top: 0;
+}
+
+/******************************************
+/* INTRO                   
+/*******************************************/
+
+.introBlurb {
+     color: #250670;
+}
+
+.intro img {
+     height: auto;
+     width: 25%;
+     float: left;
+     margin-right: 2em;
+}
+
+/******************************************
+/* SERVICES                   
+/*******************************************/
+
+.services {
+     background-color: #b2b0b1;
+     color: white;
+}
+
+.services .skills {
+     float: left;
+     width: 33.33%;
+}
+
+.services div {
+     width: 70%;
+     height: 7.7em;
+     margin: auto;
+     margin-bottom: 4em;
+     padding: 1em;
+     border: 1px solid white;
+     border-radius: .2em;
+}
+
+.faded {
+     opacity: .5;
+}
+
+.hide {
+     display: none;
+}
+
+.services h3 {
+     background-color: #b2b0b1;
+}
+
+.services .centerWhite {
+     width: 75%;
+     margin: auto;
+     text-align: center;
+}
+
+.services img {
+     width: 5em;
+     margin: auto;
+     display: block;
+     margin-bottom: 1em;
+}
+
+/******************************************
+/* FEATURED WORK               
+/*******************************************/
+
+.featuredWork div {
+     width: 33.33%;
+     float: left;
+}
+
+.featuredWork img {
+     width: 100%;
+     height: auto;
+}
+
+/******************************************
+/* EXPERIENCE                 
+/*******************************************/
+
+.experience {
+     background-image: url("../img/glass.png");
+     background-repeat: no-repeat;
+     background-size: 100%;
+     background-position: center;
+     color: white;
+}
+
+.columnThird {
+     float: left;
+     width: 33.33%;
+     margin-bottom: 2em;
+}
+
+.experience div + div, .columnThird div:first-child {
+     background-color:rgba(51,217,194,0.5);
+     width: auto;
+     padding: 1em;
+     margin-bottom: 1em;
+     border-radius: .2em;
+}
+
+.experience div > p {
+     margin: 0;
+}
+
+.experience div p:nth-child(2) {
+     font-style: italic;
+}
+
+.timeline {
+     width: auto;
+     margin: 0 10%;
+}
+
+.timeline p {
+     margin: 0;
+     border-radius: 0;
+     padding: 5px 20px;
+}
+
+.timeline p:nth-child(odd) {
+     -webkit-clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+     clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+/*.timeline p:nth-child(even) {
+     -webkit-clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+     clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+}*/
+
+.timeline p:last-child {
+     margin-bottom: 0;
+}
+
+.timeline p + div {
+     width: 50%;
+     height: 7.5em;
+     border-right: 1px solid white;
+}
+
+/******************************************
+/* TESTIMONIALS                   
+/*******************************************/
+
+.testimonials div {
+     width: 30%;
+     height: auto;
+     padding: 1em;
+     float: left;
+     margin: 1%;
+     margin-top: 7%;
+     border-top: 10px solid rgba(51,217,194,1);
+}
+
+.testimonials img {
+     width: 50%;
+     height: auto;
+     border-radius: 50%;
+     margin: -33% 25% 1em 25%;
+     border: 5px solid white;
+}
+
+.testimonials p:nth-child(2) {
+     text-align: center;
+     color: white;
+     border-bottom: 1px solid white;
+     padding-bottom: 1em;
+     margin-top: 0;
+}
+
+.testimonials p:last-child {
+     margin-bottom: 0;
+}
+
+/******************************************
+/* CONTACT                 
+/*******************************************/
+
+.contact {
+     background-image: url("../img/contact.png");
+     background-repeat: no-repeat;
+     background-size: 100%;
+     background-position: center;
+     color: white;
+}
+
+form {
+     margin-left: 20%;
+     margin-right: 20%;
+}
+
+.contact input, textarea {
+     height: 2em;
+     border: none;
+     border-radius: .2em;
+}
+
+.contact .name, .email {
+     width: 49%;     
+     float: left;
+}
+
+.contact textarea {
+     width: 100%;
+     height: 4em;
+}
+
+.contact .button {
+     font-size: 16px;
+     line-height: 1.4;
+     font-family: 'PT Sans Narrow', sans-serif;
+}
