@@ -1,5 +1,40 @@
 $(document).ready(function(){
 
+/******************************************
+/* STICKY NAV                   
+/*******************************************/
+
+	$(function(){
+	    $(window).scroll(function() {
+	        if ($(this).scrollTop() >= 320) {
+	            $(".mainNav").addClass("stickytop");
+	            $("body").css("margin-top","3.7em");
+	        }
+	        else {
+	            $(".mainNav").removeClass("stickytop");
+	            $("body").css("margin-top","0em");
+	        }
+	    });
+	});
+
+/******************************************
+/* BACK TO TOP                  
+/*******************************************/
+
+	$(function(){
+	    $(window).scroll(function() {
+	        if ($(this).scrollTop() >= 1000) {
+	            $("#backToTop").show();
+	        }else {
+	            $("#backToTop").hide();
+	        }
+	    });
+	});
+
+/******************************************
+/* DISPLAY SERVICES ICONS ON HOVER                   
+/*******************************************/
+
 	$(".photography").hover(function(e){
 		e.preventDefault();
 		$(".photography").toggleClass("active");

@@ -21,18 +21,29 @@
 			
 		<div id="container">	
 
-			<header>
-				<!--add a nav??-->
+			<header id="header">
 				<img src="img/header-logo.png" alt="logo">
 			</header>
 
+			<nav class="mainNav">
+				  <a href="#services">Services</a>
+				  <a href="#featuredWork">Featured Work</a>
+				  <a href="#experience">Experience</a>
+				  <a href="#testimonials">Testimonials</a>
+				  <a href="#contactForm">Contact</a>
+			</nav>
+
+			<div id="backToTop">
+				<a href="#header">Back to top</a>
+			</div>
+
 			<section class="intro clearfix standardLayout"><!--INTRODUCTION-->
 				<img src="img/headshot.png" alt="headshot">
-				<p><span class="introBlurb">Hi, I'm Gwen Kidera!</span><br>I'm a freelance designer and photographer based in Boston, MA. I specialize in travel and event photography, portraits and headshots, and wedding and engagement shoots.</p>
+				<p><span class="introBlurb">Hi, I'm Gwen Kidera!</span><br>I'm a freelance designer and photographer based in Boston, MA. I first started photographing while studying in South Africa in college. I realized that I was unable to fully capture my experiences in words, so I turned to my camera and haven't looked back since.<br>I studied design and photography at the School of Museum of Fine Arts, Massachusetts College of Art and Design, and New England School of Photography. Most recently, I completed a course at General Assembly in Front-End Web Development where I built this site!</p>
 				<a href="#contactForm"><p class="button">Let's Chat!</p></a>
 			</section>
 
-			<section class="services standardLayout clearfix"><!--SERVICES-->
+			<section id="services" class="services standardLayout clearfix"><!--SERVICES-->
 				<h2 class="whiteh2">Services</h2>
 
 				<section class="skills photography">
@@ -72,7 +83,7 @@
 				</section>
 			</section> 
 
-			<section class="featuredWork clear standardLayout"><!--FEATURED WORK-->
+			<section id="featuredWork" class="featuredWork clear standardLayout"><!--FEATURED WORK-->
 				<h2 class="purpleh2">Featured Work</h2>
 
 				<div>
@@ -93,7 +104,7 @@
 				<a href="http://design.gwenkidera.com" target="_blank"><p class="button clear">View More Work</p></a>
 			</section>	
 
-			<section class="experience clear standardLayout"><!--EXPERIENCE-->
+			<section id="experience" class="experience clear standardLayout"><!--EXPERIENCE-->
 				<h2 class="whiteh2">Experience</h2>
 
 				<section>
@@ -176,7 +187,7 @@
 				<a href="link/gwen-kidera-resume.pdf" target="_blank"><p class="button clear">Download Resume</p></a>
 			</section>
 
-			<section class="testimonials clear standardLayout"><!--TESTIMONIALS-->
+			<section id="testimonials" class="testimonials clear standardLayout"><!--TESTIMONIALS-->
 				<h2 class="purpleh2">Testimonials</h2>
 
 				<div>
@@ -216,17 +227,28 @@
 				</div>
 			</section>
 
-			<section id="contactForm" class="contact standardLayout clear"><!--CONTACT-->
-				<form>
-					<h2 class="purpleh2">Contact</h2>
+			<section id="contactForm" class="contact standardLayout clear"><!--CONTACT-->   
+				
+				<h2 class="purpleh2">Contact</h2>
 
-					<div class="name">Name:<br><input type="text" name="your-name"><br></div>
+				<form method="post" action="mailer.php">
 
-					<div class="email">Email:<br><input type="email" name="email-address"><br></div>
+					<div class="name">
+						<label for="cname">Name:</label><br>
+                        <input type="text" class="form-control" id="cname" name="name" minlength="2"  aria-required="true" required>
+                    </div>
 
-					<div class="message clear">Message:<br><textarea name="message"></textarea></div>
+					<div class="email">
+						<label for="cemail">Email:</label><br>
+                        <input type="email" class="form-control" id="cemail" name="email" aria-required="true" required>
+                    </div>
 
-					<input class="button clear" type="submit" value="Submit">
+					<div class="message clear">
+						<label for="cmessage">Message:</label>
+                        <textarea class="form-control" id="cmessage" name="message" aria-required="true" required></textarea>
+					</div>
+
+					<input id="submitButton" class="button clear" type="submit" value="Submit">
 				</form>
 			</section>
 	
