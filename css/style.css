@@ -61,16 +61,14 @@ body {
 }
 
 header {
-     height: 20em;
+     height: auto;
      width: 100%;
      background-image: url("../img/pixelsoffury.png");
      background-repeat: no-repeat;
      background-size: 100%;
      background-position: center;
-}
-
-header img {
      padding: 4% 44%;
+     margin: auto;
 }
 
 .standardLayout {
@@ -98,10 +96,15 @@ nav a {
 
 nav a:hover {
      color: rgba(51,217,194,1);
+     background-color: rgba(255,255,255,.2);
+     padding: 1.1em 1em;
 }
 
-nav a:last-child {
-     padding-right: 0;
+.anchor {
+     margin-top: -3.5em;
+     height: 3.5em;
+     display: block;
+     visibility: hidden; 
 }
 
 .stickytop {
@@ -273,6 +276,36 @@ h3, label {
      height: auto;
 }
 
+.featuredWork a {
+    position: relative;
+    padding: 0;
+    display: block;
+}
+
+.featuredWork div p {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;  
+    right: 0; 
+    color: white;
+    background-color: rgba(37,6,112,.8);
+    border-radius: .2em;
+    padding: 1em;
+    margin: 0;
+    margin-bottom: .4em;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.featuredWork div p:hover {
+    opacity: 1;
+}
+
 /******************************************
 /* EXPERIENCE                 
 /*******************************************/
@@ -308,17 +341,20 @@ h3, label {
 }
 
 .timeline {
-     width: auto;
-     margin: 0 10%;
+     width: 33.33%;
+     margin: auto;
 }
 
 .timeline p {
      margin: 0;
+     margin: auto;
      border-radius: 0;
+     width: 7em;
      padding: 5px 20px;
+     text-align: center;
 }
 
-.timeline p:nth-child(odd) {
+.timeline p {
      -webkit-clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
      clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
 }
@@ -342,13 +378,17 @@ h3, label {
 /* TESTIMONIALS                   
 /*******************************************/
 
+.testimonials {
+     height: auto;
+}
+
 .testimonials div {
      width: 30%;
      height: auto;
      padding: 1em;
      float: left;
      margin: 1%;
-     margin-top: 7%;
+     margin-top: 5%;
      border-top: 10px solid rgba(51,217,194,1);
 }
 
