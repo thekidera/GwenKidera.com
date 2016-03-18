@@ -67,8 +67,15 @@ header {
      background-repeat: no-repeat;
      background-size: 100%;
      background-position: center;
-     padding: 4% 44%;
-     margin: auto;
+     padding: 3.75em;
+}
+
+header img {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
 }
 
 .standardLayout {
@@ -96,9 +103,22 @@ nav ul {
 nav li:not(.subNav) {
      text-align: center;
      height: auto;
-     width: 11em;
+     width: auto;
      float: left;
      padding: 1em;
+     width: 16.66%;
+}
+
+nav>ul>li {
+    position: relative;
+}
+
+nav>ul>li:first-of-type {
+    margin-left: 6.3333%;
+}
+
+nav>ul>li>ul {
+    position: absolute;
 }
 
 nav li a:not(.subNav) {
@@ -119,10 +139,19 @@ nav a:hover {
 
 .topNav:hover .subNav a {
      display: block;
-     background-color: #250670;
+     background-color: #b2b0b1;
      margin: 0;
      margin-bottom: .2em;
-     padding: 0;
+     padding: .5em;
+     z-index: 3;
+}
+
+.topNav .subNav:first-child {
+    margin-top: 1.5em;
+}
+
+.subNav:hover a {
+    color: #250670;
 }
 
 .anchor {
@@ -319,6 +348,7 @@ h3, label {
      background-size: 100%;
      background-position: center;
      color: white;
+     background-size: cover;
 }
 
 .columnThird {
@@ -386,16 +416,26 @@ h3, label {
 }
 
 .testimonials div {
-     width: 30%;
+     width: 260px;
      height: auto;
      padding: 1em;
      float: left;
-     margin: 1%;
-     margin-top: 5%;
+     margin-left: 10px;
+     margin-right: 10px;
+     margin-top: 3em;
      border-top: 10px solid rgba(51,217,194,1);
+     -webkit-transition: margin-left 1.5s ease;
+     -moz-transition: margin-left 1.5s ease;
+     transition: margin-left 1.5s ease;
 }
 
-.testimonials img {
+.testimonials .arrow {
+    width: 20px;
+    float: left;
+    margin-top: 250px;
+}
+
+.testimonials img:not(.arrow) {
      width: 50%;
      height: auto;
      border-radius: 50%;
@@ -413,6 +453,25 @@ h3, label {
 
 .testimonials p:last-child {
      margin-bottom: 0;
+}
+
+/*TESTIMONIAL SLIDER*/
+
+#image-container-wrapper {
+     width: 840px;
+     height: 560px;
+     overflow: hidden;
+}
+#image-container{
+     width: 1680px;
+}
+
+div.img-moved-left {
+     margin-left: -280px;
+}
+
+div.img-moved-right {
+     margin-left: 280px;
 }
 
 /******************************************

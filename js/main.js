@@ -88,9 +88,30 @@ $(document).ready(function(){
 			$(".webDesign p").addClass("hide");
 		}	
 	});
-});
 
 /******************************************
 /* TESTIMONIAL CAROUSEL                 
 /*******************************************/
 
+	$(".arrow:first-of-type").on("click",previousTestimonial);
+	$(".arrow:last-of-type").on("click",nextTestimonial);
+
+	function previousTestimonial(){
+		$("#image-container div").eq(0).addClass("img-moved-left");
+
+		$("#image-container").on("transitionEnd webkitTransitionEnd", ".img-moved-left",function(){
+			$("#image-container").append(this);
+			$(this).removeClass("img-moved-left");
+		});	
+	}
+
+	function nextTestimonial(){
+		$("#image-container div").eq(0).addClass("img-moved-right");
+
+		$("#image-container").on("transitionEnd webkitTransitionEnd", ".img-moved-right",function(){
+			$("#image-container").append(this);
+			$(this).removeClass("img-moved-right");
+		});
+	}	
+
+});
