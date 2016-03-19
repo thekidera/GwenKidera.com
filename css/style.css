@@ -66,8 +66,9 @@ header {
      background-image: url("../img/pixelsoffury.png");
      background-repeat: no-repeat;
      background-size: 100%;
+     background-size: cover;
      background-position: center;
-     padding: 3.75em;
+     padding: 6em;
 }
 
 header img {
@@ -140,10 +141,10 @@ nav a:hover {
 .topNav:hover .subNav a {
      display: block;
      background-color: #b2b0b1;
-     margin: 0;
      margin-bottom: .2em;
+     margin-left: -5px;
      padding: .5em;
-     z-index: 3;
+     width: 130px;
 }
 
 .topNav .subNav:first-child {
@@ -424,15 +425,25 @@ h3, label {
      margin-right: 10px;
      margin-top: 3em;
      border-top: 10px solid rgba(51,217,194,1);
-     -webkit-transition: margin-left 1.5s ease;
-     -moz-transition: margin-left 1.5s ease;
-     transition: margin-left 1.5s ease;
+     -webkit-transition: margin-left 1s ease;
+     -moz-transition: margin-left 1s ease;
+     transition: margin-left 1s ease;
 }
 
 .testimonials .arrow {
     width: 20px;
-    float: left;
+    float: left;    
+    position: absolute;
+}
+
+.testimonials .arrow:first-of-type {
     margin-top: 250px;
+    margin-left: 15px;
+}
+
+.testimonials .arrow:last-of-type {
+    margin-top: -266px;
+    margin-left: 875px;
 }
 
 .testimonials img:not(.arrow) {
@@ -459,9 +470,11 @@ h3, label {
 
 #image-container-wrapper {
      width: 840px;
-     height: 560px;
+     height: 515px;
      overflow: hidden;
+     margin: auto;
 }
+
 #image-container{
      width: 1680px;
 }

@@ -6,9 +6,9 @@ $(document).ready(function(){
 
 	$(function(){
 	    $(window).scroll(function() {
-	        if ($(this).scrollTop() >= 320) {
+	        if ($(this).scrollTop() >= 394) {
 	            $(".mainNav").addClass("stickytop");
-	            $("body").css("margin-top","3.7em");
+	            $("body").css("margin-top","3.4em");
 	        }
 	        else {
 	            $(".mainNav").removeClass("stickytop");
@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 	$(function(){
 	    $(window).scroll(function() {
-	        if ($(this).scrollTop() >= 1000) {
+	        if ($(this).scrollTop() >= 900) {
 	            $("#backToTop").show();
 	        }else {
 	            $("#backToTop").hide();
@@ -106,10 +106,10 @@ $(document).ready(function(){
 	}
 
 	function nextTestimonial(){
-		$("#image-container div").eq(0).addClass("img-moved-right");
+		$("#image-container div").eq(3).addClass("img-moved-right");
 
 		$("#image-container").on("transitionEnd webkitTransitionEnd", ".img-moved-right",function(){
-			$("#image-container").append(this);
+			$("#image-container").prepend(this);
 			$(this).removeClass("img-moved-right");
 		});
 	}	
